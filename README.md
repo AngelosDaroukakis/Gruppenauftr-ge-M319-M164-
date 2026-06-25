@@ -4,7 +4,7 @@
 Codera Battle – rundenbasiertes Kampfsystem mit Datenbankanbindung
 
 ## Kurzbeschreibung
-*Codera Battle ist ein Gruppenprojekt, in dem ein CLI-basiertes Kampfsystem in Go entwickelt und mit einer PostgreSQL-Datenbank über Docker verbunden wird.*
+*Codera Battle ist ein Gruppenprojekt, in dem ein CLI-basiertes Kampfsystem in Go entwickelt und mit einer PostgreSQL-Datenbank über Docker verbunden wird.*sd
 
 ---
 
