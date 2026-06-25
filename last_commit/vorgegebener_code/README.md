@@ -1,100 +1,27 @@
-# Codera Battle – Gruppenauftrag (M319 / M164)
+# Codera Battle – Vorgegebener Code
 
-## Codera Battle – rundenbasiertes Kampfsystem mit Datenbankanbindung
+Dieses Paket enthält das Grundgerüst für den Abschlussauftrag M319.
 
-## Kurzbeschreibung
-*Codera Battle ist ein Schulprojekt, das die Module M319 (Programmieren in Go) und M164 (Datenbanken) kombiniert. Entwickelt wird ein CLI-basiertes, rundenbasiertes Kampfsystem mit PostgreSQL-Datenbank via Docker.*
+Passen Sie dieses README an sobald Sie mit dem Projekt fertig sind. Es soll einem Programmierenden einen grundlegenden Überblick über die Funktion und die Struktur des Programms geben!
 
----
+## Verzeichnisstruktur
 
-## 1. Projektübersicht
+```
+.
+├── main.go            # Einstiegspunkt (darf angepasst werden)
+├── go.mod             # Module-Definition
+├── go.sum
+├── internal/
+│   └── types.go       # Combatant-Interface & Stats (nicht verändern)
+├── dragon/
+│   └── dragon.go      # Entropie-Drache (vollständig, nicht verändern)
+└── combat/
+    └── combat.go      # Kampf-Loop (teilimplementiert)
+```
 
-Die Gruppe entwickelt gemeinsam ein rundenbasiertes Kampfspiel, das in der Kommandozeile läuft. Jeder Charakter besitzt eigene Stats, Ausrüstung und Skills und wird in einer PostgreSQL-Datenbank gespeichert, die lokal über Docker betrieben wird.
+## Was ist bereits fertig?
 
-Alle Spieler treten gemeinsam gegen den Entropie-Drachen an, der fix vorgegeben ist und nicht verändert werden darf. Die Zugreihenfolge richtet sich nach dem Speed-Wert. Schaden, Trefferchance und kritische Treffer werden zufällig berechnet.
-
----
-
-## 2. Rollen und Aufgaben
-
-### Masato – Arkan-Dokumentar
-Masato ist verantwortlich für die technische Struktur und Qualität des gesamten Projekts.
-
-Er übernimmt folgende Aufgaben:
-- Einrichtung des Git-Repositories
-- Definition der Branching-Strategie
-- Sicherstellen, dass alle den Linter verwenden
-- Erstellung der C4-Architekturdiagramme
-- Dokumentation des gesamten Systems
-- Überprüfung von Codequalität und Struktur
-- Implementierung eines eigenen Magier-Charakters
-
----
-
-### Angelos – Daten-Druide
-Angelos ist verantwortlich für die gesamte Datenbank- und Go-Datenebene.
-
-Er übernimmt folgende Aufgaben:
-- Erstellung der GORM-Modelle
-- Aufbau der Datenbankverbindung in Go
-- Entwicklung der Seed-Daten
-- Setup eines PostgreSQL-Containers via Docker
-- Erstellung und Dokumentation des ERD
-- Sicherstellen, dass andere die Datenbank reproduzieren können
-
----
-
-### Lazar – Funktions-Krieger
-Lazar ist verantwortlich für die Kernlogik des Spiels.
-
-Er übernimmt folgende Aufgaben:
-- Implementierung des Kampf-Systems (Combat Loop)
-- Steuerung der Spiel-Logik im CLI
-- Integration von Zufallssystemen (Damage, Hit-Chance, Crits)
-- Einsatz von Goroutines für parallele Abläufe
-- Absicherung gemeinsamer Ressourcen mit Mutex
-- Testen der Datenbankverbindung
-- Validierung der Datenbankabfragen
-
----
-
-## 3. Spielsystem (M319)
-
-Das Kampfsystem basiert auf rundenbasierten Kämpfen in der Kommandozeile.
-
-Wichtige Mechaniken:
-- Speed-Wert bestimmt Zugreihenfolge
-- RNG steuert Schaden, Treffer und kritische Treffer
-- Jeder Spieler hat einen eigenen Helden als separates Go-Paket
-- Der Entropie-Drache ist der finale Gegner und fix vorgegeben
-
----
-
-## 4. Datenbanksystem (M164)
-
-Jede Person betreibt eine lokale PostgreSQL-Instanz via Docker.
-
-Gemeinsam werden folgende Schritte umgesetzt:
-- Erstellung eines ERD (Entity Relationship Diagram)
-- Umsetzung in ein relationales Schema
-- Erstellung der Tabellen via DDL
-- Befüllung mit Seed-Daten
-- Durchführung von JOIN- und Filterabfragen
-- Export und Reimport als SQL-Dump
-
----
-
-## 5. Abgabeanforderungen
-
-Die Abgabe erfolgt über ein Git-Repository mit vollständiger Historie.
-
-Erforderlich sind:
-- Vollständige Git-History mit nachvollziehbaren Beiträgen
-- C4-Diagramme
-- Gruppendokumentation
-- Unit Tests
-- Godoc-Dokumentation
-- SQL-Skripte (DDL, Seed, Queries, Dump)
-- Saubere Projektstruktur
-
-Fehlende oder nicht nachvollziehbare Beiträge können zu Notenabzug für die gesamte Gruppe führen.
+- **Drache** mit KI, Fähigkeiten und Rage-Modus (Konstanten, keine DB nötig)
+- **Schadensformel** mit RNG, Genauigkeit und kritischen Treffern
+- **Kampf-Loop** mit Initiativereihenfolge und Sieg/Niederlage-Prüfung
+- **Platzhalter-Helden** damit das Programm startet
