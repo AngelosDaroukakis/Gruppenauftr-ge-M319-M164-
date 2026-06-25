@@ -1,0 +1,11 @@
+linters:
+  enable:
+    - gofmt
+    - govet
+    - errcheck
+    - godot
+    - godox
+
+linters-settings:
+  godot:
+    scope: declarations
