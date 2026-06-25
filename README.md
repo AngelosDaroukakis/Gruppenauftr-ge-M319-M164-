@@ -18,9 +18,9 @@ Alle Spieler treten gemeinsam gegen den Entropie-Drachen an, der fix vorgegeben 
 ## 2. Rollen und Aufgaben
 
 ### Masato – Arkan-Dokumentar
-Masato ist verantwortlich für die technische Struktur und Qualität des gesamten Projekts.
+Verantwortlich für die technische Struktur und Qualität des gesamten Projekts.
 
-Er übernimmt folgende Aufgaben:
+Aufgaben:
 - Einrichtung des Git-Repositories
 - Definition der Branching-Strategie
 - Sicherstellen, dass alle den Linter verwenden
@@ -32,9 +32,9 @@ Er übernimmt folgende Aufgaben:
 ---
 
 ### Angelos – Daten-Druide
-Angelos ist verantwortlich für die gesamte Datenbank- und Go-Datenebene.
+Verantwortlich für die gesamte Datenbank- und Go-Datenebene.
 
-Er übernimmt folgende Aufgaben:
+Aufgaben:
 - Erstellung der GORM-Modelle
 - Aufbau der Datenbankverbindung in Go
 - Entwicklung der Seed-Daten
@@ -45,9 +45,9 @@ Er übernimmt folgende Aufgaben:
 ---
 
 ### Lazar – Funktions-Krieger
-Lazar ist verantwortlich für die Kernlogik des Spiels.
+Verantwortlich für die Kernlogik des Spiels.
 
-Er übernimmt folgende Aufgaben:
+Aufgaben:
 - Implementierung des Kampf-Systems (Combat Loop)
 - Steuerung der Spiel-Logik im CLI
 - Integration von Zufallssystemen (Damage, Hit-Chance, Crits)
